@@ -43,7 +43,7 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
           <img
             src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg"
             alt="ДЮЦ Лидер"
-            className="h-[88px] w-auto"
+            className="h-9 w-auto"
           />
           <span className="font-cormorant text-xl font-semibold tracking-wide" style={{ color: 'hsl(var(--foreground))' }}>
             ДЮЦ <span className="text-neon">ЛИДЕР</span>
