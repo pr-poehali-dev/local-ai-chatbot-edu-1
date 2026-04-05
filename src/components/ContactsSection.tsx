@@ -33,6 +33,18 @@ export default function ContactsSection() {
           </p>
         </div>
 
+        {/* Карта */}
+        <div className="rounded-2xl overflow-hidden border border-[hsl(220,15%,16%)] mb-10" style={{ height: '320px' }}>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=53.089755%2C67.638250&z=16&pt=53.089755%2C67.638250%2Cpm2rdm&text=%D0%9D%D0%B0%D1%80%D1%8C%D1%8F%D0%BD-%D0%9C%D0%B0%D1%80%2C%20%D1%83%D0%BB.%20%D0%92%D1%8B%D1%83%D1%87%D0%B5%D0%B9%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%2030"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            title="Расположение ДЮЦ Лидер на карте"
+          />
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
