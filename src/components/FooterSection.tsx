@@ -8,7 +8,7 @@ export default function FooterSection() {
           <img
             src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg"
             alt="ДЮЦ Лидер"
-            className="h-8 w-auto"
+            className="h-20 w-auto"
           />
           <span className="font-cormorant text-lg font-semibold text-white">
             ДЮЦ <span className="text-neon">ЛИДЕР</span>

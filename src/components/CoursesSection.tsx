@@ -213,9 +213,9 @@ export default function CoursesSection() {
 
         <div className="mb-16 text-center">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[hsl(42,90%,58%)]/30 bg-[hsl(42,90%,58%)]/10 text-xs font-medium text-gold mb-6">
-            <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-5 w-auto opacity-90" />
-            <span className="w-px h-4 bg-current opacity-30" />
-            <img src="https://kvantorium83.ru/wp-content/uploads/2023/04/logotip.png" alt="Кванториум НАО" className="h-5 w-auto opacity-90" />
+            <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-[50px] w-auto opacity-90" />
+            <span className="w-px h-8 bg-current opacity-30" />
+            <img src="https://kvantorium83.ru/wp-content/uploads/2023/04/logotip.png" alt="Кванториум НАО" className="h-[50px] w-auto opacity-90" />
           </div>
           <h2 className="font-cormorant text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
             О <span className="text-gold italic">занятиях</span>
@@ -355,14 +355,14 @@ export default function CoursesSection() {
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-6 mt-10 flex-wrap">
-          <a href="https://lidernao.ru/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 opacity-50 hover:opacity-80 transition-opacity">
-            <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-6 w-auto" />
+        <div className="flex items-end justify-center gap-10 mt-10 flex-wrap">
+          <a href="https://lidernao.ru/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 opacity-50 hover:opacity-80 transition-opacity">
+            <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-[60px] w-auto" />
             <span className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>lidernao.ru</span>
           </a>
-          <span className="text-xs opacity-30" style={{ color: 'hsl(var(--muted-foreground))' }}>•</span>
-          <a href="https://kvantorium83.ru/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 opacity-50 hover:opacity-80 transition-opacity">
-            <img src="https://kvantorium83.ru/wp-content/uploads/2023/04/logotip.png" alt="Кванториум НАО" className="h-6 w-auto" />
+          <span className="text-xs opacity-30 mb-3" style={{ color: 'hsl(var(--muted-foreground))' }}>•</span>
+          <a href="https://kvantorium83.ru/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 opacity-50 hover:opacity-80 transition-opacity">
+            <img src="https://kvantorium83.ru/wp-content/uploads/2023/04/logotip.png" alt="Кванториум НАО" className="h-[60px] w-auto" />
             <span className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>kvantorium83.ru</span>
           </a>
         </div>
