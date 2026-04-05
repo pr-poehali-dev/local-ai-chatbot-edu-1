@@ -80,11 +80,12 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
             <Icon name="ArrowRight" size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
           <button
-            onClick={() => onNavigate('chatbot')}
-            className="flex items-center gap-2 px-8 py-4 rounded-xl border border-[hsl(220,15%,22%)] text-[hsl(210,20%,85%)] font-medium text-base hover:border-[hsl(245,80%,65%)]/50 hover:text-white transition-all"
+            onClick={() => onNavigate('contacts')}
+            className="flex items-center gap-2 px-8 py-4 rounded-xl border font-medium text-base transition-all"
+            style={{ borderColor: 'hsl(var(--border))', color: 'hsl(var(--foreground))' }}
           >
-            <Icon name="MessageCircle" size={18} />
-            Задать вопрос
+            <Icon name="Phone" size={18} />
+            Связаться с нами
           </button>
         </div>
 

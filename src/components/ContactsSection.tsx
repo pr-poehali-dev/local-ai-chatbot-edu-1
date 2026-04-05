@@ -66,21 +66,7 @@ export default function ContactsSection() {
               ))}
             </div>
 
-            <div className="p-6 rounded-2xl border" style={{ borderColor: 'hsl(var(--primary)/0.2)', background: 'hsl(var(--primary)/0.05)' }}>
-              <h3 className="font-semibold mb-3 flex items-center gap-2" style={{ color: 'hsl(var(--foreground))' }}>
-                <Icon name="Headphones" size={18} className="text-neon" />
-                Мгновенная поддержка
-              </h3>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                Используйте встроенный чат-бот для мгновенных ответов — он работает 24/7 и знает ответы на 95% вопросов.
-              </p>
-              <button
-                onClick={() => document.getElementById('chatbot')?.scrollIntoView({ behavior: 'smooth' })}
-                className="flex items-center gap-2 text-sm text-neon font-medium hover:opacity-80 transition-opacity"
-              >
-                Открыть чат <Icon name="ArrowRight" size={14} />
-              </button>
-            </div>
+
 
             <div className="flex items-center gap-4">
               {[

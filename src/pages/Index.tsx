@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import HeroSection from '@/components/HeroSection';
 import CoursesSection from '@/components/CoursesSection';
-import ChatbotSection from '@/components/ChatbotSection';
+import QRSection from '@/components/QRSection';
 import ContactsSection from '@/components/ContactsSection';
 import FooterSection from '@/components/FooterSection';
 
-const sectionIds = ['home', 'courses', 'chatbot', 'contacts'];
+const sectionIds = ['home', 'courses', 'qr', 'contacts'];
 
 export default function Index() {
   const [activeSection, setActiveSection] = useState('home');
@@ -41,7 +41,7 @@ export default function Index() {
       <NavBar activeSection={activeSection} onNavigate={handleNavigate} />
       <HeroSection onNavigate={handleNavigate} />
       <CoursesSection />
-      <ChatbotSection />
+      <QRSection />
       <ContactsSection />
       <FooterSection />
 
