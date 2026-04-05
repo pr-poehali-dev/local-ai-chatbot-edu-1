@@ -27,9 +27,13 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[hsl(220,20%,6%)]/90 backdrop-blur-xl border-b border-[hsl(220,15%,16%)]'
+          ? 'backdrop-blur-xl border-b'
           : 'bg-transparent'
       }`}
+      style={scrolled ? {
+        background: 'hsl(var(--background)/0.9)',
+        borderColor: 'hsl(var(--border))',
+      } : undefined}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <button
@@ -39,7 +43,7 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
           <div className="w-8 h-8 rounded-lg bg-neon glow-neon flex items-center justify-center">
             <Icon name="Zap" size={16} className="text-white" />
           </div>
-          <span className="font-cormorant text-xl font-semibold text-white tracking-wide">
+          <span className="font-cormorant text-xl font-semibold tracking-wide" style={{ color: 'hsl(var(--foreground))' }}>
             Edu<span className="text-neon">Flow</span>
           </span>
         </button>
@@ -52,7 +56,7 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
               className={`nav-link text-sm font-medium transition-colors ${
                 activeSection === link.id
                   ? 'text-neon'
-                  : 'text-[hsl(215,15%,65%)]'
+                  : 'text-[hsl(var(--muted-foreground))]'
               }`}
             >
               {link.label}
@@ -68,7 +72,7 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
         </button>
 
         <button
-          className="md:hidden text-[hsl(215,15%,65%)] hover:text-white transition-colors"
+          className="md:hidden text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <Icon name={menuOpen ? 'X' : 'Menu'} size={22} />
@@ -76,13 +80,15 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-[hsl(220,18%,9%)]/95 backdrop-blur-xl border-b border-[hsl(220,15%,16%)] px-6 py-4 flex flex-col gap-4 animate-fade-in">
+        <div className="md:hidden backdrop-blur-xl border-b px-6 py-4 flex flex-col gap-4 animate-fade-in"
+          style={{ background: 'hsl(var(--card)/0.97)', borderColor: 'hsl(var(--border))' }}
+        >
           {links.map((link) => (
             <button
               key={link.id}
               onClick={() => { onNavigate(link.id); setMenuOpen(false); }}
               className={`text-left text-sm font-medium py-2 transition-colors ${
-                activeSection === link.id ? 'text-neon' : 'text-[hsl(215,15%,65%)]'
+                activeSection === link.id ? 'text-neon' : 'text-[hsl(var(--muted-foreground))]'
               }`}
             >
               {link.label}
