@@ -81,13 +81,13 @@ export default function AccessibilityPanel() {
 
           <div className="p-5 flex flex-col gap-5">
 
-            {/* Тема */}
+            {/* Тема — 2 кнопки в ряд */}
             <div>
               <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                Тема
+                Оформление
               </p>
               <div className="grid grid-cols-2 gap-2">
-                {([['dark', 'Moon', 'Тёмная'], ['light', 'Sun', 'Светлая']] as const).map(([val, icon, label]) => (
+                {([['dark', 'Moon', 'Тёмное'], ['light', 'Sun', 'Светлое']] as const).map(([val, icon, label]) => (
                   <button
                     key={val}
                     onClick={() => update({ theme: val })}
@@ -105,35 +105,44 @@ export default function AccessibilityPanel() {
               </div>
             </div>
 
-            {/* Режим для слабовидящих */}
+            {/* Для слабовидящих — отдельная кнопка */}
             <div>
               <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                Режим зрения
+                Для слабовидящих
               </p>
-              <div className="flex flex-col gap-2">
-                {([
-                  ['none', 'Eye', 'Обычный'],
-                  ['vision', 'EyeOff', 'Для слабовидящих'],
-                  ['contrast', 'Contrast', 'Высокий контраст'],
-                ] as const).map(([val, icon, label]) => (
-                  <button
-                    key={val}
-                    onClick={() => update({ a11y: val })}
-                    className="flex items-center gap-3 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all text-left"
-                    style={{
-                      borderColor: settings.a11y === val ? 'hsl(var(--primary))' : 'hsl(var(--border))',
-                      background: settings.a11y === val ? 'hsl(var(--primary)/0.12)' : 'transparent',
-                      color: settings.a11y === val ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))',
-                    }}
-                  >
-                    <Icon name={icon} fallback="Eye" size={16} />
-                    {label}
-                    {settings.a11y === val && (
-                      <Icon name="Check" size={14} className="ml-auto" />
-                    )}
-                  </button>
-                ))}
-              </div>
+              <button
+                onClick={() => update({ a11y: settings.a11y === 'vision' ? 'none' : 'vision' })}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm font-medium transition-all"
+                style={{
+                  borderColor: settings.a11y === 'vision' ? 'hsl(var(--primary))' : 'hsl(var(--border))',
+                  background: settings.a11y === 'vision' ? 'hsl(var(--primary)/0.12)' : 'transparent',
+                  color: settings.a11y === 'vision' ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))',
+                }}
+              >
+                <Icon name="Eye" size={17} />
+                Режим слабовидящих
+                {settings.a11y === 'vision' && <Icon name="Check" size={14} className="ml-auto" />}
+              </button>
+            </div>
+
+            {/* Высокий контраст */}
+            <div>
+              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'hsl(var(--muted-foreground))' }}>
+                Контрастность
+              </p>
+              <button
+                onClick={() => update({ a11y: settings.a11y === 'contrast' ? 'none' : 'contrast' })}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm font-medium transition-all"
+                style={{
+                  borderColor: settings.a11y === 'contrast' ? 'hsl(var(--primary))' : 'hsl(var(--border))',
+                  background: settings.a11y === 'contrast' ? 'hsl(var(--primary)/0.12)' : 'transparent',
+                  color: settings.a11y === 'contrast' ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))',
+                }}
+              >
+                <Icon name="Contrast" fallback="Circle" size={17} />
+                Высокий контраст
+                {settings.a11y === 'contrast' && <Icon name="Check" size={14} className="ml-auto" />}
+              </button>
             </div>
 
             {/* Крупный шрифт */}
