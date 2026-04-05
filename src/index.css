@@ -72,7 +72,7 @@
   --gold: 195 70% 38%;
 }
 
-/* ── Режим для слабовидящих ── */
+/* ── Режим для слабовидящих (светлая тема — по умолчанию) ── */
 .a11y-vision {
   --background: 60 100% 97%;
   --foreground: 0 0% 5%;
@@ -83,27 +83,58 @@
   --popover: 0 0% 100%;
   --popover-foreground: 0 0% 5%;
 
-  --primary: 245 90% 45%;
+  --primary: 180 60% 30%;
   --primary-foreground: 0 0% 100%;
 
   --secondary: 60 30% 90%;
   --secondary-foreground: 0 0% 5%;
 
   --muted: 60 30% 90%;
-  --muted-foreground: 0 0% 25%;
+  --muted-foreground: 0 0% 20%;
 
-  --accent: 30 100% 45%;
+  --accent: 30 100% 40%;
   --accent-foreground: 0 0% 100%;
 
-  --border: 0 0% 20%;
+  --border: 0 0% 18%;
   --input: 60 30% 88%;
-  --ring: 245 90% 45%;
+  --ring: 180 60% 30%;
 
-  --neon: 245 90% 45%;
-  --gold: 30 100% 40%;
+  --neon: 180 60% 30%;
+  --gold: 30 100% 35%;
 
   font-size: 18px !important;
   letter-spacing: 0.03em;
+}
+
+/* ── Режим для слабовидящих (тёмная тема) ── */
+.a11y-vision:not(.theme-light) {
+  --background: 192 30% 8%;
+  --foreground: 60 100% 95%;
+
+  --card: 192 28% 12%;
+  --card-foreground: 60 100% 95%;
+
+  --popover: 192 28% 12%;
+  --popover-foreground: 60 100% 95%;
+
+  --primary: 180 60% 65%;
+  --primary-foreground: 192 30% 8%;
+
+  --secondary: 192 25% 18%;
+  --secondary-foreground: 60 80% 90%;
+
+  --muted: 192 25% 18%;
+  --muted-foreground: 60 40% 75%;
+
+  --accent: 38 100% 60%;
+  --accent-foreground: 0 0% 0%;
+
+  --border: 60 30% 35%;
+  --input: 192 25% 16%;
+  --ring: 180 60% 65%;
+
+  --neon: 180 60% 65%;
+  --gold: 38 100% 60%;
 }
 
 .a11y-vision * {
