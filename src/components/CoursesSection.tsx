@@ -217,7 +217,7 @@ export default function CoursesSection() {
             ДЮЦ «Лидер» и Кванториум НАО
           </div>
           <h2 className="font-cormorant text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
-            О <span className="text-gold italic">программах</span>
+            О <span className="text-gold italic">занятиях</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
             Спортивные секции ДЮЦ «Лидер» и технологические квантумы Кванториума НАО — всё для развития детей и молодёжи Нарьян-Мара.
