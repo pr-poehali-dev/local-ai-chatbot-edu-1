@@ -40,6 +40,11 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
           onClick={() => onNavigate('home')}
           className="flex items-center gap-2 group"
         >
+          <img
+            src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg"
+            alt="ДЮЦ Лидер"
+            className="h-9 w-auto"
+          />
           <span className="font-cormorant text-xl font-semibold tracking-wide" style={{ color: 'hsl(var(--foreground))' }}>
             ДЮЦ <span className="text-neon">ЛИДЕР</span>
           </span>
