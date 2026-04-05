@@ -5,7 +5,6 @@ import CoursesSection from '@/components/CoursesSection';
 import ChatbotSection from '@/components/ChatbotSection';
 import ContactsSection from '@/components/ContactsSection';
 import FooterSection from '@/components/FooterSection';
-import AccessibilityPanel from '@/components/AccessibilityPanel';
 
 const sectionIds = ['home', 'courses', 'chatbot', 'contacts'];
 
@@ -45,7 +44,7 @@ export default function Index() {
       <ChatbotSection />
       <ContactsSection />
       <FooterSection />
-      <AccessibilityPanel />
+
     </div>
   );
 }
