@@ -2,10 +2,10 @@ import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 const contacts = [
-  { icon: 'Mail', label: 'Email', value: 'support@eduflow.ru', color: 'hsl(245,80%,65%)' },
-  { icon: 'Phone', label: 'Телефон', value: '+7 (800) 000-00-00', color: 'hsl(42,90%,58%)' },
-  { icon: 'MapPin', label: 'Адрес', value: 'Москва, ул. Примерная, 1', color: 'hsl(160,60%,45%)' },
-  { icon: 'Clock', label: 'Часы работы', value: 'Пн–Вс 9:00–21:00', color: 'hsl(320,70%,60%)' },
+  { icon: 'Mail', label: 'Email', value: 'lidernao@mail.ru', color: 'hsl(245,80%,65%)' },
+  { icon: 'Phone', label: 'Телефон', value: '+7 (81853) 4-22-43', color: 'hsl(42,90%,58%)' },
+  { icon: 'MapPin', label: 'Адрес', value: '166000, НАО, г. Нарьян-Мар, ул. Выучейского, д. 30', color: 'hsl(160,60%,45%)' },
+  { icon: 'Globe', label: 'Сайт', value: 'lidernao.ru', color: 'hsl(320,70%,60%)' },
 ];
 
 export default function ContactsSection() {
