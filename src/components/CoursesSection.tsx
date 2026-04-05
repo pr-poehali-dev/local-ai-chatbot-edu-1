@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
-const categories = ['Все', 'Спортивные', 'Единоборства', 'Физическая культура'];
+const categories = ['Все', 'Спортивные', 'Единоборства', 'Физическая культура', 'Кванториум'];
 
 const courses = [
   {
@@ -125,6 +125,78 @@ const courses = [
     color: 'hsl(160,55%,45%)',
     tag: null,
   },
+  {
+    id: 13,
+    title: 'IT-квантум',
+    category: 'Кванториум',
+    desc: 'Программирование, разработка приложений и сайтов, алгоритмы и основы искусственного интеллекта.',
+    age: '10–18 лет',
+    duration: 'Весь год',
+    icon: 'Code2',
+    color: 'hsl(245,80%,65%)',
+    tag: 'Популярное',
+    source: 'kvantorium83.ru',
+  },
+  {
+    id: 14,
+    title: 'Робоквантум',
+    category: 'Кванториум',
+    desc: 'Проектирование и сборка роботов, программирование микроконтроллеров Arduino и LEGO Mindstorms.',
+    age: '10–18 лет',
+    duration: 'Весь год',
+    icon: 'Bot',
+    color: 'hsl(200,80%,55%)',
+    tag: null,
+    source: 'kvantorium83.ru',
+  },
+  {
+    id: 15,
+    title: 'VR/AR-квантум',
+    category: 'Кванториум',
+    desc: 'Создание проектов в виртуальной и дополненной реальности. Разработка 3D-сред и интерактивных сценариев.',
+    age: '12–18 лет',
+    duration: 'Весь год',
+    icon: 'Glasses',
+    color: 'hsl(280,70%,60%)',
+    tag: 'Новое',
+    source: 'kvantorium83.ru',
+  },
+  {
+    id: 16,
+    title: 'Промдизайн-квантум',
+    category: 'Кванториум',
+    desc: '3D-моделирование, прототипирование и промышленный дизайн. Работа с 3D-принтерами и CAD-системами.',
+    age: '10–18 лет',
+    duration: 'Весь год',
+    icon: 'Layers',
+    color: 'hsl(30,85%,55%)',
+    tag: null,
+    source: 'kvantorium83.ru',
+  },
+  {
+    id: 17,
+    title: 'Аэроквантум',
+    category: 'Кванториум',
+    desc: 'Проектирование и пилотирование БПЛА (дронов). Основы аэродинамики, навигации и программирования полётов.',
+    age: '12–18 лет',
+    duration: 'Весь год',
+    icon: 'PlaneTakeoff',
+    color: 'hsl(160,60%,45%)',
+    tag: null,
+    source: 'kvantorium83.ru',
+  },
+  {
+    id: 18,
+    title: 'Шахматы',
+    category: 'Кванториум',
+    desc: 'Развитие логического мышления, памяти и стратегии. Занятия для начинающих и опытных игроков.',
+    age: '6–18 лет',
+    duration: 'Весь год',
+    icon: 'Crown',
+    color: 'hsl(42,90%,58%)',
+    tag: null,
+    source: 'kvantorium83.ru',
+  },
 ];
 
 export default function CoursesSection() {
@@ -142,14 +214,13 @@ export default function CoursesSection() {
         <div className="mb-16 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[hsl(42,90%,58%)]/30 bg-[hsl(42,90%,58%)]/10 text-xs font-medium text-gold mb-6">
             <Icon name="BookOpen" size={12} />
-            Образовательные объединения ДЮЦ «Лидер»
+            ДЮЦ «Лидер» и Кванториум НАО
           </div>
           <h2 className="font-cormorant text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
             О <span className="text-gold italic">программах</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
-            Спортивные секции и образовательные объединения для детей и молодёжи.
-            Профессиональные тренеры, современная база, соревнования всех уровней.
+            Спортивные секции ДЮЦ «Лидер» и технологические квантумы Кванториума НАО — всё для развития детей и молодёжи Нарьян-Мара.
           </p>
         </div>
 
@@ -284,7 +355,11 @@ export default function CoursesSection() {
         </div>
 
         <p className="text-center text-xs mt-8" style={{ color: 'hsl(var(--muted-foreground))' }}>
-          Источник: <a href="https://lidernao.ru/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">lidernao.ru</a> — ДЮЦ «Лидер», Архангельская область
+          Источники:{' '}
+          <a href="https://lidernao.ru/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">lidernao.ru</a>
+          {' '}— ДЮЦ «Лидер»,{' '}
+          <a href="https://kvantorium83.ru/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">kvantorium83.ru</a>
+          {' '}— Кванториум НАО, г. Нарьян-Мар
         </p>
       </div>
     </section>
