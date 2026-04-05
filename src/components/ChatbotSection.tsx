@@ -21,7 +21,7 @@ const botName = 'EduBot';
 const initMessage: Message = {
   id: 0,
   role: 'bot',
-  text: 'Привет! Я EduBot 👋 — помогу разобраться с платформой, курсами и любыми вопросами. Нажмите на вопрос ниже или напишите свой.',
+  text: 'Привет! Я EduBot 👋 — помогу разобраться с платформой, занятиями и любыми вопросами. Нажмите на вопрос ниже или напишите свой.',
   time: now(),
 };
 
@@ -64,35 +64,36 @@ export default function ChatbotSection() {
   };
 
   return (
-    <section id="chatbot" className="py-28 px-6 bg-[hsl(220,18%,8%)]">
+    <section id="chatbot" className="py-28 px-6" style={{ background: 'hsl(var(--background))' }}>
       <div className="max-w-5xl mx-auto">
         <div className="mb-16 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[hsl(245,80%,65%)]/30 bg-[hsl(245,80%,65%)]/10 text-xs font-medium text-neon mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[hsl(var(--neon))]/30 bg-[hsl(var(--neon))]/10 text-xs font-medium text-neon mb-6">
             <Icon name="Bot" size={12} />
             Умный помощник
           </div>
-          <h2 className="font-cormorant text-5xl md:text-6xl font-semibold text-white mb-4">
+          <h2 className="font-cormorant text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
             <span className="text-neon italic">Чат-бот</span> поддержки
           </h2>
-          <p className="text-[hsl(215,15%,55%)] text-lg max-w-xl mx-auto">
-            Мгновенные ответы на любые вопросы о платформе и курсах — без ожидания.
+          <p className="text-lg max-w-xl mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
+            Мгновенные ответы на любые вопросы о занятиях — без ожидания.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           <div className="lg:col-span-2 flex flex-col gap-3">
-            <h3 className="text-sm font-medium text-[hsl(215,15%,55%)] uppercase tracking-widest mb-1">
+            <h3 className="text-sm font-medium uppercase tracking-widest mb-1" style={{ color: 'hsl(var(--muted-foreground))' }}>
               Частые вопросы
             </h3>
             {faqs.map((faq, i) => (
               <button
                 key={i}
                 onClick={() => handleFaq(faq, i)}
-                className={`text-left px-4 py-3 rounded-xl border text-sm transition-all ${
-                  selectedFaq === i
-                    ? 'border-[hsl(245,80%,65%)]/50 bg-[hsl(245,80%,65%)]/10 text-white'
-                    : 'border-[hsl(220,15%,16%)] text-[hsl(215,15%,60%)] hover:border-[hsl(245,80%,65%)]/30 hover:text-white'
-                }`}
+                className="text-left px-4 py-3 rounded-xl border text-sm transition-all"
+                style={{
+                  borderColor: selectedFaq === i ? 'hsl(var(--primary)/0.5)' : 'hsl(var(--border))',
+                  background: selectedFaq === i ? 'hsl(var(--primary)/0.1)' : 'transparent',
+                  color: selectedFaq === i ? 'hsl(var(--foreground))' : 'hsl(var(--muted-foreground))',
+                }}
               >
                 <div className="flex items-start gap-2">
                   <Icon name="HelpCircle" size={14} className="mt-0.5 flex-shrink-0 text-neon" />
@@ -102,16 +103,19 @@ export default function ChatbotSection() {
             ))}
           </div>
 
-          <div className="lg:col-span-3 flex flex-col rounded-2xl border border-[hsl(220,15%,16%)] bg-[hsl(220,20%,7%)] overflow-hidden" style={{ height: '520px' }}>
-            <div className="flex items-center gap-3 px-5 py-4 border-b border-[hsl(220,15%,14%)]">
+          <div
+            className="lg:col-span-3 flex flex-col rounded-2xl border overflow-hidden"
+            style={{ height: '520px', borderColor: 'hsl(var(--border))', background: 'hsl(var(--card))' }}
+          >
+            <div className="flex items-center gap-3 px-5 py-4 border-b" style={{ borderColor: 'hsl(var(--border))' }}>
               <div className="w-9 h-9 rounded-xl bg-neon/20 flex items-center justify-center animate-pulse-glow">
                 <Icon name="Bot" size={18} className="text-neon" />
               </div>
               <div>
-                <div className="text-sm font-semibold text-white">{botName}</div>
+                <div className="text-sm font-semibold" style={{ color: 'hsl(var(--foreground))' }}>{botName}</div>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                  <span className="text-xs text-[hsl(215,15%,50%)]">Онлайн · отвечает мгновенно</span>
+                  <span className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>Онлайн · отвечает мгновенно</span>
                 </div>
               </div>
             </div>
@@ -129,15 +133,15 @@ export default function ChatbotSection() {
                   )}
                   <div className={`max-w-[75%] ${msg.role === 'user' ? 'items-end' : 'items-start'} flex flex-col gap-1`}>
                     <div
-                      className={`px-4 py-3 rounded-2xl text-sm leading-relaxed ${
-                        msg.role === 'bot'
-                          ? 'bg-[hsl(220,15%,13%)] text-[hsl(210,20%,85%)] rounded-tl-sm'
-                          : 'bg-neon text-white rounded-tr-sm'
-                      }`}
+                      className="px-4 py-3 rounded-2xl text-sm leading-relaxed"
+                      style={msg.role === 'bot'
+                        ? { background: 'hsl(var(--secondary))', color: 'hsl(var(--foreground))', borderRadius: '16px 16px 16px 4px' }
+                        : { background: 'hsl(var(--neon))', color: '#fff', borderRadius: '16px 16px 4px 16px' }
+                      }
                     >
                       {msg.text}
                     </div>
-                    <span className="text-xs text-[hsl(215,15%,40%)]">{msg.time}</span>
+                    <span className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>{msg.time}</span>
                   </div>
                 </div>
               ))}
@@ -147,7 +151,7 @@ export default function ChatbotSection() {
                   <div className="w-7 h-7 rounded-lg bg-neon/20 flex items-center justify-center flex-shrink-0">
                     <Icon name="Bot" size={14} className="text-neon" />
                   </div>
-                  <div className="px-4 py-3 rounded-2xl rounded-tl-sm bg-[hsl(220,15%,13%)]">
+                  <div className="px-4 py-3 rounded-2xl rounded-tl-sm" style={{ background: 'hsl(var(--secondary))' }}>
                     <div className="flex gap-1.5 items-center h-4">
                       {[0, 1, 2].map(i => (
                         <span
@@ -163,7 +167,7 @@ export default function ChatbotSection() {
               <div ref={bottomRef} />
             </div>
 
-            <div className="p-4 border-t border-[hsl(220,15%,14%)]">
+            <div className="p-4 border-t" style={{ borderColor: 'hsl(var(--border))' }}>
               <form
                 onSubmit={(e) => { e.preventDefault(); sendMessage(input); }}
                 className="flex gap-2"
@@ -172,14 +176,19 @@ export default function ChatbotSection() {
                   value={input}
                   onChange={e => setInput(e.target.value)}
                   placeholder="Напишите вопрос..."
-                  className="flex-1 px-4 py-2.5 rounded-xl bg-[hsl(220,15%,12%)] border border-[hsl(220,15%,18%)] text-sm text-white placeholder-[hsl(215,15%,40%)] focus:outline-none focus:border-[hsl(245,80%,65%)]/50 transition-colors"
+                  className="flex-1 px-4 py-2.5 rounded-xl text-sm focus:outline-none transition-colors"
+                  style={{
+                    background: 'hsl(var(--input))',
+                    border: '1px solid hsl(var(--border))',
+                    color: 'hsl(var(--foreground))',
+                  }}
                 />
                 <button
                   type="submit"
                   disabled={!input.trim() || isTyping}
-                  className="w-10 h-10 rounded-xl bg-neon flex items-center justify-center disabled:opacity-40 hover:opacity-90 transition-opacity glow-neon"
+                  className="w-10 h-10 rounded-xl bg-neon text-white flex items-center justify-center hover:opacity-90 transition-opacity disabled:opacity-40 glow-neon"
                 >
-                  <Icon name="Send" size={16} className="text-white" />
+                  <Icon name="Send" size={16} />
                 </button>
               </form>
             </div>
