@@ -334,9 +334,7 @@ export default function CoursesSection() {
                 <span className="text-xs px-2 py-0.5 rounded" style={{ background: 'hsl(var(--muted))', color: 'hsl(var(--muted-foreground))' }}>
                   👤 {course.age}
                 </span>
-                <span className="text-xs px-2 py-0.5 rounded" style={{ background: 'hsl(var(--muted))', color: 'hsl(var(--muted-foreground))' }}>
-                  📅 {course.duration}
-                </span>
+                <span className="text-xs px-2 py-0.5 rounded" style={{ background: 'hsl(var(--muted))', color: 'hsl(var(--muted-foreground))' }}>01.09-25.05</span>
               </div>
 
               <div
