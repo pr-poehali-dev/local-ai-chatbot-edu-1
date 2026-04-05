@@ -177,7 +177,7 @@ export default function CoursesSection() {
                 До 18 лет — бесплатно
               </div>
               <p className="text-sm leading-relaxed" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                Все образовательные программы ДЮЦ «Лидер» для детей и подростков <strong style={{ color: 'hsl(var(--foreground))' }}>до 18 лет</strong> финансируются из бюджета Архангельской области и предоставляются <strong style={{ color: 'hsl(var(--foreground))' }}>полностью бесплатно</strong>.
+                Все образовательные программы ДЮЦ «Лидер» для детей и подростков <strong style={{ color: 'hsl(var(--foreground))' }}>до 18 лет</strong> финансируются из бюджета Ненецкого Автономного Округа и предоставляются <strong style={{ color: 'hsl(var(--foreground))' }}>полностью бесплатно</strong>.
               </p>
             </div>
           </div>
