@@ -10,7 +10,7 @@ export default function FooterSection() {
             alt="ДЮЦ Лидер"
             className="h-20 w-auto"
           />
-          <span className="font-cormorant text-lg text-white font-bold">
+          <span className="font-cormorant text-lg font-bold text-[#8ec7b6]">
             ДЮЦ <span className="text-neon">ЛИДЕР</span>
           </span>
         </div>
