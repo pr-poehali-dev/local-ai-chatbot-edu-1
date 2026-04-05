@@ -40,11 +40,8 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
           onClick={() => onNavigate('home')}
           className="flex items-center gap-2 group"
         >
-          <div className="w-8 h-8 rounded-lg bg-neon glow-neon flex items-center justify-center">
-            <Icon name="Zap" size={16} className="text-white" />
-          </div>
           <span className="font-cormorant text-xl font-semibold tracking-wide" style={{ color: 'hsl(var(--foreground))' }}>
-            Edu<span className="text-neon">Flow</span>
+            ДЮЦ <span className="text-neon">ЛИДЕР</span>
           </span>
         </button>
 
