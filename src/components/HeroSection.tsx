@@ -63,10 +63,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         <p
           className="text-[hsl(215,15%,60%)] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200"
           style={{ opacity: 0 }}
-        >
-          Образовательная платформа с живыми наставниками, интерактивными заданиями
-          и поддержкой 24/7. Учись в своём темпе — мы рядом.
-        </p>
+        >Образовательная платформа с живыми наставниками, интерактивными заданиями. Учись в своём темпе — мы рядом.</p>
 
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up delay-300"
