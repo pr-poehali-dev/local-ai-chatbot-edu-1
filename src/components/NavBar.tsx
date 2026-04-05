@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
+import { useSettings } from '@/hooks/useSettings';
 
 interface NavBarProps {
   activeSection: string;
@@ -16,6 +17,7 @@ const links = [
 export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { settings, update } = useSettings();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -64,6 +66,45 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
               {link.label}
             </button>
           ))}
+        </div>
+
+        <div className="hidden md:flex items-center gap-2">
+          <button
+            onClick={() => update({ theme: 'dark' })}
+            title="Тёмное оформление"
+            className="w-8 h-8 rounded-lg border flex items-center justify-center transition-all hover:opacity-90"
+            style={{
+              borderColor: settings.theme === 'dark' ? 'hsl(var(--primary))' : 'hsl(var(--border))',
+              background: settings.theme === 'dark' ? 'hsl(var(--primary)/0.15)' : 'transparent',
+              color: settings.theme === 'dark' ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))',
+            }}
+          >
+            <Icon name="Moon" size={15} />
+          </button>
+          <button
+            onClick={() => update({ theme: 'light' })}
+            title="Светлое оформление"
+            className="w-8 h-8 rounded-lg border flex items-center justify-center transition-all hover:opacity-90"
+            style={{
+              borderColor: settings.theme === 'light' ? 'hsl(var(--primary))' : 'hsl(var(--border))',
+              background: settings.theme === 'light' ? 'hsl(var(--primary)/0.15)' : 'transparent',
+              color: settings.theme === 'light' ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))',
+            }}
+          >
+            <Icon name="Sun" size={15} />
+          </button>
+          <button
+            onClick={() => update({ a11y: settings.a11y === 'vision' ? 'none' : 'vision' })}
+            title="Версия для слабовидящих"
+            className="w-8 h-8 rounded-lg border flex items-center justify-center transition-all hover:opacity-90"
+            style={{
+              borderColor: settings.a11y === 'vision' ? 'hsl(var(--primary))' : 'hsl(var(--border))',
+              background: settings.a11y === 'vision' ? 'hsl(var(--primary)/0.15)' : 'transparent',
+              color: settings.a11y === 'vision' ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))',
+            }}
+          >
+            <Icon name="Eye" size={15} />
+          </button>
         </div>
 
         <button

@@ -1,48 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Icon from '@/components/ui/icon';
-
-export type ThemeMode = 'dark' | 'light';
-export type A11yMode = 'none' | 'vision' | 'contrast';
-
-interface Settings {
-  theme: ThemeMode;
-  a11y: A11yMode;
-  largeText: boolean;
-}
-
-const STORAGE_KEY = 'eduflow-a11y';
-
-function loadSettings(): Settings {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) return JSON.parse(saved);
-  } catch (e) {
-    return { theme: 'dark', a11y: 'none', largeText: false };
-  }
-  return { theme: 'dark', a11y: 'none', largeText: false };
-}
-
-function applySettings(settings: Settings, root: HTMLElement) {
-  root.classList.remove('theme-light', 'a11y-vision', 'a11y-contrast', 'a11y-large-text');
-  if (settings.theme === 'light') root.classList.add('theme-light');
-  if (settings.a11y === 'vision') root.classList.add('a11y-vision');
-  if (settings.a11y === 'contrast') root.classList.add('a11y-contrast');
-  if (settings.largeText) root.classList.add('a11y-large-text');
-}
+import { useSettings } from '@/hooks/useSettings';
 
 export default function AccessibilityPanel() {
   const [open, setOpen] = useState(false);
-  const [settings, setSettings] = useState<Settings>(loadSettings);
-
-  useEffect(() => {
-    applySettings(settings, document.documentElement);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
-  }, [settings]);
-
-  const update = (patch: Partial<Settings>) =>
-    setSettings(prev => ({ ...prev, ...patch }));
-
-  const isLight = settings.theme === 'light';
+  const { settings, update } = useSettings();
 
   return (
     <>
@@ -81,7 +43,6 @@ export default function AccessibilityPanel() {
 
           <div className="p-5 flex flex-col gap-5">
 
-            {/* Тема — 2 кнопки в ряд */}
             <div>
               <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'hsl(var(--muted-foreground))' }}>
                 Оформление
@@ -105,7 +66,6 @@ export default function AccessibilityPanel() {
               </div>
             </div>
 
-            {/* Для слабовидящих — отдельная кнопка */}
             <div>
               <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'hsl(var(--muted-foreground))' }}>
                 Для слабовидящих
@@ -125,7 +85,6 @@ export default function AccessibilityPanel() {
               </button>
             </div>
 
-            {/* Высокий контраст */}
             <div>
               <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'hsl(var(--muted-foreground))' }}>
                 Контрастность
@@ -145,7 +104,6 @@ export default function AccessibilityPanel() {
               </button>
             </div>
 
-            {/* Крупный шрифт */}
             <div>
               <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'hsl(var(--muted-foreground))' }}>
                 Размер текста
@@ -175,7 +133,6 @@ export default function AccessibilityPanel() {
               </button>
             </div>
 
-            {/* Сброс */}
             <button
               onClick={() => update({ theme: 'dark', a11y: 'none', largeText: false })}
               className="text-xs text-center py-2 rounded-lg transition-colors hover:opacity-80"
