@@ -355,15 +355,18 @@ export default function CoursesSection() {
           ))}
         </div>
 
-        <div className="flex items-end justify-center gap-10 mt-10 flex-wrap">
-          <a href="https://lidernao.ru/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 opacity-50 hover:opacity-80 transition-opacity">
-            <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-[60px] w-auto" />
-            <span className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>lidernao.ru</span>
-          </a>
-          <a href="https://kvantorium83.ru/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 opacity-50 hover:opacity-80 transition-opacity">
-            <img src="https://kvantorium83.ru/wp-content/uploads/2023/04/logotip.png" alt="Кванториум НАО" className="h-[60px] w-auto" />
-            <span className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>kvantorium83.ru</span>
-          </a>
+        <div className="mt-16 text-center">
+          <p className="text-sm font-medium uppercase tracking-widest mb-6" style={{ color: 'hsl(var(--muted-foreground))' }}>
+            Наши сайты
+          </p>
+          <div className="flex items-center justify-center gap-12 flex-wrap">
+            <a href="https://lidernao.ru/" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-80 transition-opacity">
+              <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-[60px] w-auto" />
+            </a>
+            <a href="https://kvantorium83.ru/" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-80 transition-opacity">
+              <img src="https://kvantorium83.ru/wp-content/uploads/2023/04/logotip.png" alt="Кванториум НАО" className="h-[60px] w-auto" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
