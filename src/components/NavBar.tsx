@@ -8,7 +8,7 @@ interface NavBarProps {
 
 const links = [
   { id: 'home', label: 'Главная' },
-  { id: 'courses', label: 'О курсах' },
+  { id: 'courses', label: 'О занятиях' },
   { id: 'chatbot', label: 'Чат-бот' },
   { id: 'contacts', label: 'Контакты' },
 ];

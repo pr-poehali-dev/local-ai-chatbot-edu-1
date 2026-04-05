@@ -6,9 +6,7 @@ interface HeroSectionProps {
 }
 
 const stats = [
-  { value: '12+', label: 'Курсов' },
-  { value: '3.4к', label: 'Студентов' },
-  { value: '98%', label: 'Довольных' },
+  { value: '17+', label: 'Программ' },
 ];
 
 export default function HeroSection({ onNavigate }: HeroSectionProps) {
@@ -50,7 +48,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[hsl(245,80%,65%)]/30 bg-[hsl(245,80%,65%)]/10 text-xs font-medium text-neon mb-8 animate-fade-in-up"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-neon animate-pulse" />
-          Новый сезон курсов — открыт набор
+          Новый сезон занятий — открыт набор
         </div>
 
         <h1
