@@ -125,17 +125,6 @@ const courses = [
     color: 'hsl(160,55%,45%)',
     tag: null,
   },
-  {
-    id: 12,
-    title: 'Киберспорт',
-    category: 'Спортивные',
-    desc: 'Дисциплина, командная работа и стратегическое мышление через соревновательные компьютерные игры.',
-    age: '10–18 лет',
-    duration: 'Весь год',
-    icon: 'Gamepad2',
-    color: 'hsl(270,75%,60%)',
-    tag: 'Новое',
-  },
 ];
 
 export default function CoursesSection() {
