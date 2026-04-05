@@ -55,7 +55,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           className="font-cormorant text-6xl md:text-8xl font-semibold leading-none mb-6 animate-fade-in-up delay-100"
           style={{ opacity: 0 }}
         >
-          <span style={{ color: 'hsl(var(--foreground))' }}>Знания, которые</span>
+          <span style={{ color: 'hsl(var(--foreground))' }}>Мы раскроем в вашем ребенке</span>
           <br />
           <span className="text-neon text-glow italic">меняют всё</span>
         </h1>
