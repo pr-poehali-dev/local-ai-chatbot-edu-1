@@ -83,8 +83,8 @@ export default function ContactsSection() {
 
             <div className="flex items-center gap-4">
               {[
-                { label: 'ВКонтакте', href: 'https://vk.com/' },
-                { label: 'Макс', href: 'https://max.ru/' },
+                { label: 'ВКонтакте', href: 'https://vk.com/naolider' },
+                { label: 'Макс', href: 'https://max.ru/id8300005685_gos' },
               ].map((s) => (
                 <a
                   key={s.label}
