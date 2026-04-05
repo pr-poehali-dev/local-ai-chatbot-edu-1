@@ -360,7 +360,6 @@ export default function CoursesSection() {
             <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-[60px] w-auto" />
             <span className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>lidernao.ru</span>
           </a>
-          <span className="text-xs opacity-30 mb-3" style={{ color: 'hsl(var(--muted-foreground))' }}>•</span>
           <a href="https://kvantorium83.ru/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 opacity-50 hover:opacity-80 transition-opacity">
             <img src="https://kvantorium83.ru/wp-content/uploads/2023/04/logotip.png" alt="Кванториум НАО" className="h-[60px] w-auto" />
             <span className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>kvantorium83.ru</span>
