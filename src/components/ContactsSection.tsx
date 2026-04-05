@@ -82,14 +82,20 @@ export default function ContactsSection() {
             </div>
 
             <div className="flex items-center gap-4">
-              {['Telegram', 'Vk', 'Youtube'].map((s) => (
-                <button
-                  key={s}
+              {[
+                { label: 'ВКонтакте', href: 'https://vk.com/' },
+                { label: 'Макс', href: 'https://max.ru/' },
+              ].map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[hsl(220,15%,18%)] text-sm text-[hsl(215,15%,55%)] hover:border-[hsl(245,80%,65%)]/40 hover:text-white transition-all"
                 >
                   <Icon name="ExternalLink" size={13} />
-                  {s}
-                </button>
+                  {s.label}
+                </a>
               ))}
             </div>
           </div>
