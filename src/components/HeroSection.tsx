@@ -76,7 +76,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
             onClick={() => onNavigate('courses')}
             className="group flex items-center gap-2 px-8 py-4 rounded-xl bg-neon text-white font-semibold text-base hover:opacity-90 transition-all glow-neon hover:scale-105"
           >
-            Смотреть курсы
+            Смотреть программы
             <Icon name="ArrowRight" size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
           <button
