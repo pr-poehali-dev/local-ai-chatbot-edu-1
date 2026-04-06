@@ -87,7 +87,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         </div>
 
         <div
-          className="flex items-center justify-center gap-8 animate-fade-in-up delay-400"
+          className="flex items-center justify-center gap-8 animate-fade-in-up delay-400 px-0 py-[15px] mx-[376px] my-0 rounded-sm"
           style={{ opacity: 0 }}
         >
           {stats.map((stat, i) => (
