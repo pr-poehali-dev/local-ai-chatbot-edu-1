@@ -57,7 +57,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         >
           <span style={{ color: 'hsl(var(--foreground))' }}>Мы раскроем в вашем ребенке</span>
           <br />
-          <span className="text-neon text-glow italic my-0 py-0 px-[11px] mx-0 text-4xl sm:text-6xl md:text-8xl">Лидера</span>
+          <span className="text-neon text-glow italic py-0 px-[11px] sm:text-6xl md:text-8xl my-0 mx-0 text-8xl">Лидера</span>
         </h1>
 
         <p
