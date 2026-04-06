@@ -9,11 +9,12 @@ const socials = [
     desc: 'Новости, фото и анонсы событий ДЮЦ «Лидер»',
   },
   {
-    name: 'Макс',
+    name: 'MAX',
     url: 'https://max.ru/id8300005685_gos',
     icon: 'MessageCircle',
     color: 'hsl(180,55%,45%)',
-    desc: 'Напишите нам напрямую в мессенджере Макс',
+    desc: 'Напишите нам напрямую в мессенджере MAX',
+    extraDesc: 'Новости, фото и анонсы событий ДЮЦ «Лидер»',
   },
 ];
 
@@ -42,12 +43,14 @@ export default function QRSection() {
               style={{ borderColor: 'hsl(var(--border))', background: 'hsl(var(--card))' }}
             >
               <div className="flex items-center gap-3">
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center"
-                  style={{ background: `${s.color}20` }}
-                >
-                  <Icon name={s.icon} fallback="Link" size={20} style={{ color: s.color }} />
-                </div>
+                {s.name !== 'ВКонтакте' && (
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center"
+                    style={{ background: `${s.color}20` }}
+                  >
+                    <Icon name={s.icon} fallback="Link" size={20} style={{ color: s.color }} />
+                  </div>
+                )}
                 <span className="text-lg font-semibold" style={{ color: 'hsl(var(--foreground))' }}>{s.name}</span>
               </div>
 
@@ -67,6 +70,11 @@ export default function QRSection() {
               <p className="text-sm text-center" style={{ color: 'hsl(var(--muted-foreground))' }}>
                 {s.desc}
               </p>
+              {s.extraDesc && (
+                <p className="text-sm text-center" style={{ color: 'hsl(var(--muted-foreground))' }}>
+                  {s.extraDesc}
+                </p>
+              )}
 
               <a
                 href={s.url}
