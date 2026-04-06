@@ -13,19 +13,19 @@ export default function CoursesSection() {
     : courses.filter(c => c.category === activeCategory);
 
   return (
-    <section id="courses" className="py-28 px-6">
+    <section id="courses" className="py-16 md:py-28 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
 
-        <div className="mb-16 text-center">
+        <div className="mb-10 md:mb-16 text-center">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[hsl(42,90%,58%)]/30 bg-[hsl(42,90%,58%)]/10 text-xs font-medium text-gold mb-6">
-            <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-[50px] w-auto opacity-90" />
-            <span className="w-px h-8 bg-current opacity-30" />
-            <img src="https://kvantorium83.ru/wp-content/uploads/2023/04/logotip.png" alt="Кванториум НАО" className="h-[50px] w-auto opacity-90" />
+            <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-[36px] sm:h-[50px] w-auto opacity-90" />
+            <span className="w-px h-6 sm:h-8 bg-current opacity-30" />
+            <img src="https://kvantorium83.ru/wp-content/uploads/2023/04/logotip.png" alt="Кванториум НАО" className="h-[36px] sm:h-[50px] w-auto opacity-90" />
           </div>
-          <h2 className="font-cormorant text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
+          <h2 className="font-cormorant text-4xl sm:text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
             О <span className="text-gold italic">занятиях</span>
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
+          <p className="text-base md:text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
             Спортивные секции ДЮЦ «Лидер» и технологические квантумы Кванториума НАО — всё для развития детей и молодёжи Нарьян-Мара.
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function CoursesSection() {
           <p className="text-sm font-medium uppercase tracking-widest mb-6" style={{ color: 'hsl(var(--muted-foreground))' }}>
             Наши сайты
           </p>
-          <div className="flex items-center justify-center gap-12 flex-wrap">
+          <div className="flex items-center justify-center gap-8 flex-wrap">
             <a href="https://lidernao.ru/" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-80 transition-opacity">
               <img src="https://lidernao.ru/wp-content/uploads/2023/08/logo_vec.svg" alt="ДЮЦ Лидер" className="h-[60px] w-auto" />
             </a>

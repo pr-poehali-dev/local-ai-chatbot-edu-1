@@ -14,7 +14,7 @@ export default function CourseCard({ course, hovered, onMouseEnter, onMouseLeave
       key={course.id}
       onMouseEnter={() => onMouseEnter(course.id)}
       onMouseLeave={onMouseLeave}
-      className="relative group rounded-2xl border p-6 card-hover cursor-pointer overflow-hidden"
+      className="relative group rounded-2xl border p-4 sm:p-6 card-hover cursor-pointer overflow-hidden"
       style={{
         borderColor: 'hsl(var(--border))',
         background: 'hsl(var(--card))',

@@ -20,26 +20,26 @@ const socials = [
 
 export default function QRSection() {
   return (
-    <section id="qr" className="py-28 px-6" style={{ background: 'hsl(var(--background))' }}>
+    <section id="qr" className="py-16 md:py-28 px-4 sm:px-6" style={{ background: 'hsl(var(--background))' }}>
       <div className="max-w-4xl mx-auto">
-        <div className="mb-16 text-center">
+        <div className="mb-10 md:mb-16 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[hsl(var(--neon))]/30 bg-[hsl(var(--neon))]/10 text-xs font-medium text-neon mb-6">
             <Icon name="QrCode" size={12} />
             Мы в социальных сетях
           </div>
-          <h2 className="font-cormorant text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
+          <h2 className="font-cormorant text-4xl sm:text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
             Подключайтесь <span className="text-neon italic">к нам</span>
           </h2>
-          <p className="text-lg max-w-xl mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
+          <p className="text-base md:text-lg max-w-xl mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
             Наведите камеру на QR-код или нажмите кнопку для перехода
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 justify-items-center">
           {socials.map((s) => (
             <div
               key={s.name}
-              className="flex flex-col items-center gap-6 p-8 rounded-2xl border w-full max-w-sm"
+              className="flex flex-col items-center gap-5 p-5 sm:p-8 rounded-2xl border w-full max-w-sm"
               style={{ borderColor: 'hsl(var(--border))', background: 'hsl(var(--card))' }}
             >
               <div className="flex items-center gap-3">
@@ -55,8 +55,7 @@ export default function QRSection() {
                 <img
                   src={`https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(s.url)}&color=000000&bgcolor=ffffff&margin=4`}
                   alt={`QR-код ${s.name}`}
-                  width={220}
-                  height={220}
+                  className="w-[160px] h-[160px] sm:w-[220px] sm:h-[220px]"
                 />
               </div>
 

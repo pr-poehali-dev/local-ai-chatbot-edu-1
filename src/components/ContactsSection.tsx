@@ -18,23 +18,23 @@ export default function ContactsSection() {
   };
 
   return (
-    <section id="contacts" className="py-28 px-6">
+    <section id="contacts" className="py-16 md:py-28 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-16 text-center">
+        <div className="mb-10 md:mb-16 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[hsl(var(--gold))]/30 bg-[hsl(var(--gold))]/10 text-xs font-medium text-gold mb-6">
             <Icon name="Send" size={12} />
             Связаться с нами
           </div>
-          <h2 className="font-cormorant text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
+          <h2 className="font-cormorant text-4xl sm:text-5xl md:text-6xl font-semibold mb-4" style={{ color: 'hsl(var(--foreground))' }}>
             <span className="text-gold italic">Контакты</span>
           </h2>
-          <p className="text-lg max-w-xl mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
+          <p className="text-base md:text-lg max-w-xl mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
             Есть вопросы? Напишите нам — ответим в течение 2 часов.
           </p>
         </div>
 
         {/* Карта */}
-        <div className="rounded-2xl overflow-hidden border mb-10" style={{ height: '320px', borderColor: 'hsl(var(--border))' }}>
+        <div className="rounded-2xl overflow-hidden border mb-8 md:mb-10" style={{ height: '240px', borderColor: 'hsl(var(--border))' }}>
           <iframe
             src="https://yandex.ru/map-widget/v1/?ll=53.089755%2C67.638250&z=16&pt=53.089755%2C67.638250%2Cpm2rdm&text=%D0%9D%D0%B0%D1%80%D1%8C%D1%8F%D0%BD-%D0%9C%D0%B0%D1%80%2C%20%D1%83%D0%BB.%20%D0%92%D1%8B%D1%83%D1%87%D0%B5%D0%B9%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%2030"
             width="100%"
@@ -88,7 +88,7 @@ export default function ContactsSection() {
             </div>
           </div>
 
-          <div className="rounded-2xl border p-8" style={{ borderColor: 'hsl(var(--border))', background: 'hsl(var(--card))' }}>
+          <div className="rounded-2xl border p-5 sm:p-8" style={{ borderColor: 'hsl(var(--border))', background: 'hsl(var(--card))' }}>
             {sent ? (
               <div className="h-full flex flex-col items-center justify-center text-center gap-4 py-8">
                 <div className="w-16 h-16 rounded-full bg-neon/20 flex items-center justify-center glow-neon animate-float">

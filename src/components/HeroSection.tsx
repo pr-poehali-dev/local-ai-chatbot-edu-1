@@ -52,33 +52,33 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         </div>
 
         <h1
-          className="font-cormorant text-6xl md:text-8xl font-semibold leading-none mb-6 animate-fade-in-up delay-100"
+          className="font-cormorant text-4xl sm:text-6xl md:text-8xl font-semibold leading-none mb-6 animate-fade-in-up delay-100"
           style={{ opacity: 0 }}
         >
           <span style={{ color: 'hsl(var(--foreground))' }}>Мы раскроем в вашем ребенке</span>
           <br />
-          <span className="text-neon text-glow italic my-0 py-0 px-[11px] mx-0 text-8xl">Лидера</span>
+          <span className="text-neon text-glow italic my-0 py-0 px-[11px] mx-0 text-4xl sm:text-6xl md:text-8xl">Лидера</span>
         </h1>
 
         <p
-          className="text-[hsl(215,15%,60%)] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200"
+          className="text-[hsl(215,15%,60%)] text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200"
           style={{ opacity: 0 }}
         >Образовательная платформа с живыми наставниками, интерактивными заданиями. Учись в своём темпе — мы рядом.</p>
 
         <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up delay-300"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up delay-300 w-full"
           style={{ opacity: 0 }}
         >
           <button
             onClick={() => onNavigate('courses')}
-            className="group flex items-center gap-2 px-8 py-4 rounded-xl bg-neon text-white font-semibold text-base hover:opacity-90 transition-all glow-neon hover:scale-105"
+            className="group flex items-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl bg-neon text-white font-semibold text-sm sm:text-base hover:opacity-90 transition-all glow-neon hover:scale-105 w-full sm:w-auto justify-center"
           >
             Смотреть программы
             <Icon name="ArrowRight" size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
           <button
             onClick={() => onNavigate('contacts')}
-            className="flex items-center gap-2 px-8 py-4 rounded-xl border font-medium text-base transition-all"
+            className="flex items-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl border font-medium text-sm sm:text-base transition-all w-full sm:w-auto justify-center"
             style={{ borderColor: 'hsl(var(--border))', color: 'hsl(var(--foreground))' }}
           >
             <Icon name="Phone" size={18} />
@@ -87,7 +87,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         </div>
 
         <div
-          className="flex items-center justify-center gap-12 animate-fade-in-up delay-400"
+          className="flex items-center justify-center gap-8 animate-fade-in-up delay-400"
           style={{ opacity: 0 }}
         >
           {stats.map((stat, i) => (

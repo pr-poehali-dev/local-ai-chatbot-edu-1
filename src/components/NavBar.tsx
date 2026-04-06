@@ -143,6 +143,41 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
           >
             Начать учиться
           </button>
+          <div className="flex items-center gap-2 pt-2 border-t" style={{ borderColor: 'hsl(var(--border))' }}>
+            <button
+              onClick={() => update({ theme: 'dark' })}
+              className="w-9 h-9 rounded-lg border flex items-center justify-center transition-all"
+              style={{
+                borderColor: settings.theme === 'dark' ? 'hsl(var(--primary))' : 'hsl(var(--border))',
+                background: settings.theme === 'dark' ? 'hsl(var(--primary)/0.15)' : 'transparent',
+                color: settings.theme === 'dark' ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))',
+              }}
+            >
+              <Icon name="Moon" size={16} />
+            </button>
+            <button
+              onClick={() => update({ theme: 'light' })}
+              className="w-9 h-9 rounded-lg border flex items-center justify-center transition-all"
+              style={{
+                borderColor: settings.theme === 'light' ? 'hsl(var(--primary))' : 'hsl(var(--border))',
+                background: settings.theme === 'light' ? 'hsl(var(--primary)/0.15)' : 'transparent',
+                color: settings.theme === 'light' ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))',
+              }}
+            >
+              <Icon name="Sun" size={16} />
+            </button>
+            <button
+              onClick={() => update({ a11y: settings.a11y === 'vision' ? 'none' : 'vision' })}
+              className="w-9 h-9 rounded-lg border flex items-center justify-center transition-all"
+              style={{
+                borderColor: settings.a11y === 'vision' ? 'hsl(var(--primary))' : 'hsl(var(--border))',
+                background: settings.a11y === 'vision' ? 'hsl(var(--primary)/0.15)' : 'transparent',
+                color: settings.a11y === 'vision' ? 'hsl(var(--primary))' : 'hsl(var(--muted-foreground))',
+              }}
+            >
+              <Icon name="Eye" size={16} />
+            </button>
+          </div>
         </div>
       )}
     </nav>
