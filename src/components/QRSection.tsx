@@ -43,14 +43,7 @@ export default function QRSection() {
               style={{ borderColor: 'hsl(var(--border))', background: 'hsl(var(--card))' }}
             >
               <div className="flex items-center gap-3">
-                {s.name !== 'ВКонтакте' && (
-                  <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background: `${s.color}20` }}
-                  >
-                    <Icon name={s.icon} fallback="Link" size={20} style={{ color: s.color }} />
-                  </div>
-                )}
+
                 <span className="text-lg font-semibold" style={{ color: 'hsl(var(--foreground))' }}>{s.name}</span>
               </div>
 
@@ -67,9 +60,11 @@ export default function QRSection() {
                 />
               </div>
 
+              {!s.extraDesc && (
               <p className="text-sm text-center" style={{ color: 'hsl(var(--muted-foreground))' }}>
                 {s.desc}
               </p>
+              )}
               {s.extraDesc && (
                 <p className="text-sm text-center" style={{ color: 'hsl(var(--muted-foreground))' }}>
                   {s.extraDesc}
